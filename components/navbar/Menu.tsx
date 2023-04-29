@@ -7,6 +7,7 @@ const menuItems = [
 ];
 interface MenuProps{
     handleActiveTab:(id:number)=>void,
+
 }
 const Menu:React.FC<MenuProps> = ({handleActiveTab}) => {
   const [activeTab, setActiveTab] = useState(1);
@@ -16,11 +17,11 @@ const Menu:React.FC<MenuProps> = ({handleActiveTab}) => {
   }, []);
   return (
     
-      <ul dir="rtl" className="flex-col flex gap-5 text-white max-md:hidden">
-        {menuItems.map((item) => (
+      <ul dir="rtl" className="flex-row flex gap-5 text-white max-md:hidden">
+        {menuItems.map((item, index) => (
           <li
             onClick={() => handleClick(item.id)}
-            className={`${activeTab === item.id && "font-bold border-b"} cursor-pointer`}
+            className={`${activeTab === item.id && "font-bold"} cursor-pointer pr-4 ${index > 0 && 'border-r-2'}`}
             key={item.id}
           >
             {item.label}

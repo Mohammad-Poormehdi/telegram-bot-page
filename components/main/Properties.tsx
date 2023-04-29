@@ -1,15 +1,16 @@
 import PropertyCard from "./PropertyCard";
 
+
 const Properties = () => {
   return (
-    <div className="flex justify-center items-center gap-5 pt-20 max-md:flex-col ">
-
+    <>
+      <div className=" property-container h-full grid grid-cols-4 max-md:flex-col gap-4 px-2 pb-20 max-md:grid-cols-1 max-md:overflow-y-scroll">
         <PropertyCard />
         <PropertyCard />
         <PropertyCard />
         <PropertyCard />
-
-    </div>
+      </div>
+    </>
   );
 };
 export default Properties;
