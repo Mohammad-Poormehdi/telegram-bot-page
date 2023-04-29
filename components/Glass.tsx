@@ -11,7 +11,7 @@ const Glass = () => {
     setActiveTab(id);
   }, []);
   return (
-    <div className="h-[80vh] overflow-hidden relative w-full my-auto space-y-10 p-10 bg-gray-500 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-[5px] bg-opacity-20 border border-gray-100">
+    <div className="h-[80vh] overflow-x-hidden overflow-y-auto max-md:overflow-y-hidden relative w-full my-auto space-y-10 p-10 bg-gray-500 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-[5px] bg-opacity-20 border border-gray-100">
       <Navbar handleActiveTab={handleActiveTab} />
         {activeTab === 1 && <TextSection />}
         {activeTab === 2 && <Properties />}
