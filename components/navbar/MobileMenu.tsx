@@ -10,11 +10,13 @@ const menuItems = [
 ];
 interface MobileMenuProps {
   handleActiveTab: (id: number) => void;
+  handleScrollActive:()=>void
 }
-const MobileMenu: React.FC<MobileMenuProps> = ({ handleActiveTab }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ handleActiveTab, handleScrollActive }) => {
   const [isActive, setIsActive] = useState(false);
   const handleMenuActive = useCallback(() => {
     setIsActive((value) => !value);
+    handleScrollActive()
   }, []);
   return (
     <>

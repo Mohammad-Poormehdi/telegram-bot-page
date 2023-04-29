@@ -7,10 +7,5 @@ main,html,body,#__next{
 .orb{
   background-image: linear-gradient(#0F1682,#07F36B,#1FFDD2);
 }
-::-webkit-scrollbar{
-  @apply w-1
-}
-::-webkit-scrollbar-thumb{
-  @apply bg-neon-green rounded-full
-}
+
 
