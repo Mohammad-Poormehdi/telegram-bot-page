@@ -3,6 +3,12 @@ import { TbRobot } from "react-icons/tb";
 
 // اطلاعات صفحه اصلی
 export const mainData = {
+  // فایل لوگو را در مسیر زیر آپلود کنید
+  // public/images
+  // و سپس مسیر آن را به صورت استرینگ وارد کنید
+  // مانند مثال زیر
+  // logo:'/images/logo-placeholder.png',
+  logo: undefined,
   heading: "هدینگ",
   subtext: "توضیحات",
   botton_label: "کلیک کنید",
@@ -22,8 +28,8 @@ export const properties = [
 // public/images
 // و سپس مانند نمونه مسیر آن را قرار دهید
 export const images = [
- {id:cuid(), src:'/images/placeholder.jpg'},
- {id:cuid(), src:'/images/placeholder.jpg'},
- {id:cuid(), src:'/images/placeholder.jpg'},
- {id:cuid(), src:'/images/placeholder.jpg'},
-]
+  { id: cuid(), src: "/images/placeholder.jpg" },
+  { id: cuid(), src: "/images/placeholder.jpg" },
+  { id: cuid(), src: "/images/placeholder.jpg" },
+  { id: cuid(), src: "/images/placeholder.jpg" },
+];
