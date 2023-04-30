@@ -13,14 +13,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, EffectCards, Pagination } from "swiper";
-
-const images = [
-  { src: "/images/placeholder.jpg", id: 1 },
-  { src: "/images/placeholder.jpg", id: 2 },
-  { src: "/images/placeholder.jpg", id: 3 },
-  { src: "/images/placeholder.jpg", id: 4 },
-  { src: "/images/placeholder.jpg", id: 5 },
-];
+import { images } from "@/data";
 
 export default function Carousel() {
   return (
@@ -45,9 +38,8 @@ export default function Carousel() {
           initialSlide={Math.floor(images.length / 2)}
         >
           {images.map((image) => (
-            <SwiperSlide>
+            <SwiperSlide key={image.id}>
               <Image
-                key={image.id}
                 src={image.src}
                 alt="screen shot"
                 width={300}
@@ -63,19 +55,15 @@ export default function Carousel() {
           effect={"cards"}
           grabCursor={true}
           slidesPerView={1}
-          initialSlide={Math.floor(images.length/2)}
-          cardsEffect={
-            {slideShadows:false}
-          }
+          initialSlide={Math.floor(images.length / 2)}
+          cardsEffect={{ slideShadows: false }}
           modules={[EffectCards]}
           className="mySwiper"
-          
         >
           {images.map((image) => (
-            <SwiperSlide>
+            <SwiperSlide key={image.id}>
               <div className="">
                 <Image
-                  key={image.id}
                   src={image.src}
                   alt="screen shot"
                   width={300}
