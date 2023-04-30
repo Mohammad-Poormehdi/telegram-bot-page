@@ -4,7 +4,9 @@ import localFont from "next/font/local";
 const IranSans = localFont({
   src: [
     { path: "../public/fonts/IRANSansX-Regular.ttf", weight: "normal" },
+    { path: "../public/fonts/IRANSansXFaNum-Regular.ttf", weight: "normal" },
     { path: "../public/fonts/IRANSansX-Bold.ttf", weight: "bold" },
+    { path: "../public/fonts/IRANSansXFaNum-Bold.ttf", weight: "bold" },
   ],
 });
 export default function App({ Component, pageProps }: AppProps) {
